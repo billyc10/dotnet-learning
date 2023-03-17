@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Code\\dotnet-learning\\dotnet-learning\\RestaurantReviews.csproj": {}
+    "C:\\dev\\dotnet-learning\\dotnet-learning\\RestaurantReviews.csproj": {}
   },
   "projects": {
-    "F:\\Code\\dotnet-learning\\dotnet-learning\\RestaurantReviews.csproj": {
+    "C:\\dev\\dotnet-learning\\dotnet-learning\\RestaurantReviews.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Code\\dotnet-learning\\dotnet-learning\\RestaurantReviews.csproj",
+        "projectUniqueName": "C:\\dev\\dotnet-learning\\dotnet-learning\\RestaurantReviews.csproj",
         "projectName": "RestaurantReviews",
-        "projectPath": "F:\\Code\\dotnet-learning\\dotnet-learning\\RestaurantReviews.csproj",
-        "packagesPath": "C:\\Users\\billy\\.nuget\\packages\\",
-        "outputPath": "F:\\Code\\dotnet-learning\\dotnet-learning\\obj\\",
+        "projectPath": "C:\\dev\\dotnet-learning\\dotnet-learning\\RestaurantReviews.csproj",
+        "packagesPath": "C:\\Users\\billy.chen1\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\dotnet-learning\\dotnet-learning\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\billy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\billy.chen1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,8 +48,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -58,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

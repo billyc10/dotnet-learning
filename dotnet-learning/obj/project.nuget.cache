@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yNcHwXqeSsZ+rsJ7LkmT8O2ciUTwSgB8wUU1uSJrLMooPGTFQFvL1xk/cQVPdEfn2gzwp10YZqlPAAui37TfFA==",
+  "dgSpecHash": "1TIJQGr2n17PVygMjBltuJJYUpDdiTaPVZ790/zH1Q45ZZOjy0Hg0JqtTU7ApWgaoX6n61uAhlEqyZ9OQTtdIw==",
   "success": true,
-  "projectFilePath": "F:\\Code\\dotnet-learning\\dotnet-learning\\RestaurantReviews.csproj",
+  "projectFilePath": "C:\\dev\\dotnet-learning\\dotnet-learning\\RestaurantReviews.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

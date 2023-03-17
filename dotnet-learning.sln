@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-learning", "dotnet-learning\dotnet-learning.csproj", "{4AABC093-30C1-4EF6-A8C4-094B2CB1316A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-learning", "dotnet-learning\RestaurantReviews.csproj", "{4AABC093-30C1-4EF6-A8C4-094B2CB1316A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
