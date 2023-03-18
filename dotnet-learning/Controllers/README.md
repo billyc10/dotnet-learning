@@ -52,3 +52,20 @@ public String HelloWorld()
 }
 ```
 Visiting `http://localhost:5194/restaurantreview/ping` would then return `"Hello World"`.
+
+## Return Types
+Although we can return specific types in our controller, such as
+```cs
+public String HelloWorld()
+```
+we can also make use of `IActionResult`. This can be used when multiple `ActionResult` return types are possible (BadRequest, NotFoundResult, OkObjectResult etc...). An example would be:
+
+```cs
+[HttpGet()]
+public IActionResult GetAllProducts()
+{
+    var products = _storeService.GetData();
+    return Ok(products);
+}
+```
+Not only does this allow us to return an HTTP action result, it also automatically serializes the OK data object into JSON, and allows the browser to more easily interpret the result.

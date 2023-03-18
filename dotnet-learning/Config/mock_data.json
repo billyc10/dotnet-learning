@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "Sweet Chilli",
+    "CuisineType": "Thai",
+    "Location": "Altona North",
+    "Rating": 4,
+    "Description": "Really yum Thai food"
+  },
+  {
+    "Name": "KFC Altona North",
+    "CuisineType": "Fast Food",
+    "Location": "Altona North",
+    "Rating": 3,
+    "Description": "It's alright, but it's no stand-out KFC"
+  },
+  {
+    "Name": "McDonalds",
+    "CuisineType": "Fast Food",
+    "Location": "Altona North",
+    "Rating": 4,
+    "Description": "Always good when in need of a quick fix, free delivery too!"
+  },
+  {
+    "Name": "Hanaichi",
+    "CuisineType": "Japanese",
+    "Location": "CBD",
+    "Rating": 5,
+    "Description": "The best damn Japanese fast food you can get! Lovely house-made chicken + curries"
+  }
+]

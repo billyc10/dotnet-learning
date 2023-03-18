@@ -19,3 +19,4 @@ C:\dev\dotnet-learning\dotnet-learning\obj\Debug\net6.0\refint\RestaurantReviews
 C:\dev\dotnet-learning\dotnet-learning\obj\Debug\net6.0\RestaurantReviews.pdb
 C:\dev\dotnet-learning\dotnet-learning\obj\Debug\net6.0\RestaurantReviews.genruntimeconfig.cache
 C:\dev\dotnet-learning\dotnet-learning\obj\Debug\net6.0\ref\RestaurantReviews.dll
+C:\dev\dotnet-learning\dotnet-learning\bin\Debug\net6.0\Config\mock_data.json
