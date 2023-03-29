@@ -54,11 +54,53 @@ _**Note**: The Generic Host is still useful for non-web scenarios, such as backg
 
 ---
 ## Services
+Services are registered in the Program class before middleware.
+
+## Dependency Injection
+
+When using dependency injection for inversion of control (IoC), the concrete types (services) are registered in the Program class. A service lifetime is specified which dictates the 'scope' of the class.
+
+For example:
+```cs
+builder.services.AddScoped<IMyDependency, MyDependency>
+```
+
+### Service Lifetimes
+- **Singleton**: Only one instance of the class is created and used for all requests for the lifetime of the app
+- **Scoped**: One instance is created per request, but re-used for repeated calls within the same request. For example `AddDbContext` when using Entity Framework Core registers `DbContext` types with a scoped lifetime by default.
+- **Transient**: An instance is spun of of the class each time it is called. This is best for lightweight, stateless services.
+
+It is important to _NOT_ resolve a scoped service from within a singleton service, to avoid _captive dependencies_. This is when a service depends on a shorter-lived service.
+
+## Grouped  Services
 We can add groups of related services to our host builder using `Add{GROUP_NAME}`
 ```cs
 builder.Services.AddControllers();
 ```
-The code above will register services required for MVC controllers
+The code above will register services required for MVC controllers. Under the hood this is just registering 
+
+If we have our own custom group of services, we can use an extension method to register them in the Program class in one go.
+
+Using an extension method:
+```cs
+public static class ServicesRegistry
+{
+    public static void AddMyDependencyGroup(this IServiceCollection, services)
+    {
+        services.AddScoped<IMyDependency, MyDependency>();
+        services.AddScoped<IMyDependency2, MyDependency2>();
+
+        return services;
+    }
+}
+```
+Then in Program class:
+```cs
+builder.services.AddMyDependencyGroup();
+```
+
+## Service Disposal
+Transient and scoped services are disposed of at the end of the request. Singleton services that are resolved from the container (i.e. registered with `AddSingleton<IX, X>`) are disposed of automatically by the container.
 
 ---
 ## Middleware
