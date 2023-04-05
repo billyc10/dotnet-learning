@@ -3,6 +3,7 @@ namespace dotnet_learning.Models
     public class RestaurantReview
     {
         private int _rating;
+        public int Id { get; set; }
 
         public string Name { get; set; }
 

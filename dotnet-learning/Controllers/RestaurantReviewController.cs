@@ -1,7 +1,6 @@
 using dotnet_learning.Models;
-using dotnet_learning.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 
 namespace dotnet_learning.Controllers
 {
@@ -10,12 +9,12 @@ namespace dotnet_learning.Controllers
     public class RestaurantReviewController : ControllerBase
     {
         private readonly ILogger<RestaurantReviewController> _logger;
-        private readonly IInMemoryObjectStoreService _storeService;
+        private readonly RestaurantReviewContext _dbContext;
 
-        public RestaurantReviewController(ILogger<RestaurantReviewController> logger, IInMemoryObjectStoreService inMemoryObjectStoreService)
+        public RestaurantReviewController(ILogger<RestaurantReviewController> logger, RestaurantReviewContext dbContext)
         {
             _logger = logger;
-            _storeService = inMemoryObjectStoreService;
+            _dbContext = dbContext;
         }
 
         [HttpGet("ping")]
@@ -27,7 +26,7 @@ namespace dotnet_learning.Controllers
         [HttpGet()]
         public IActionResult GetAll()
         {
-            var data = _storeService.GetData();
+            var data = _dbContext.RestaurantReviews.ToList();
             return Ok(data);
         }
     }
