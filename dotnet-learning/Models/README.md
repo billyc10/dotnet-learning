@@ -23,9 +23,15 @@ The constructor for our DbContext includes an `options` argument
 ```cs
 public RestaurantReviewContext(DbContextOptions<RestaurantReviewContext> options) : base(options)
 ```
-We use the options to specify what kind of database we will be using when registering the DbContext in our program. In our API, we are currently using an in-memory database and so it is registered as:
+We use the options to specify what kind of database we will be using when registering the DbContext in our program. In our API, we are currently using an in-memory database (Nuget dependency: `Microsoft.EntityFrameworkCore.InMemory`) and so it is registered as:
 
 ```cs
 builder.Services.AddDbContext<RestaurantReviewContext>(options => 
     options.UseInMemoryDatabase("RestaurantReviews"));
 ```
+
+The DbContext comes with methods to interact with the database, e.g:
+- `Add`
+- `FindAsync`
+- `FromSql`
+- `SaveChanges`
