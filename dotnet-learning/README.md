@@ -126,3 +126,10 @@ to add endpoints for controller actions (maps different request paths to differe
 app.Run();
 ```
 to conclude the middleware pipeline and run our app.
+
+# TODO:
+- Clean up Database implementation (run a local real database)
+- Add a docker image that spins up a fake upstream API
+- Add OpenAPI specification to the controller
+- Make call to Upstream API (learn about `HttpClient`)
+- Add Auth
